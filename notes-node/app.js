@@ -1,5 +1,5 @@
-console.log("starting app.js");
-
+// node --inspect-brk app.js
+// chrome://inspect -> Open Dedicated DevTools for Node
 const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
@@ -46,11 +46,17 @@ if (command === 'add')
 		console.error("Note duplicate! Did not add");
 } else if (command === 'list') {
 	var allNotes = notes.getAll();
+<<<<<<< HEAD
 
 	console.log(`Printing ${allNotes.length} note(s)`);
 
 	allNotes.forEach((note) => notes.logNote(note));
 	
+=======
+	console.log(`Printing ${allNotes.length} note(s)`);
+
+	allNotes.forEach((note) => notes.logNote(note));
+>>>>>>> dd7bfb414a88b7d52dfcf447ddd897b9fa43e460
 } else if (command === 'read') {
 	var noteRead = notes.getNote(argv.title);
 
